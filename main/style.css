@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Navigation */
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    margin-top: 10px;
+    position: sticky;
+}
+
+#navbar #logo img {
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 55px;
+    margin: 15px 25px;
+}
+
+#navbar h1 {
+    font-size: 1.8rem;
+    position: relative;
+    right: 20px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#navbar .navigation-item a {
+    font-size: 1.8rem;
+    margin: 50px 207px;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+#navbar .navigation-item a:hover {
+    color: rgb(141, 141, 235);
+}
+
+/* Tickets Info */
+#tickets-info {
+    display: grid;
+    border: 5px solid black;
+    background-color: black;
+    grid-template-columns: 4.5fr 4.5fr 5fr;
+    gap: 5px;
+}
+
+#tickets-info .tickets {
+    background-color: white;
+    font-size: 1.8rem;
+    padding: 12px 0px;
+    font-weight: 500;
+    color: red;
+    text-align: center;
+    border: 1.2px solid white;
+}
+
+#tickets-info .tickets a {
+    text-decoration: none;
+    color: red;
+}
+
+/* Banner */
+#board {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#board #info,
+#board #giphy {
+    height: 700px;
+}
+
+#board #info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(197, 187, 187);
+    color: black;
+    box-shadow: inset -88px 0px rgb(180, 234, 234);
+}
+
+#board #info h1,
+#board #info h3 {
+    margin-top: 20px;
+}
+
+#board #info h1 {
+    font-size: 3.4rem;
+    font-weight: 650;
+    width: 507px;
+    height: 142px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#board #info h3 {
+    width: 500px;
+    height: 150px;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+#board #giphy img {
+    height: 701px;
+}
+
+button {
+    padding: 12px 30px;
+    margin-right: 200px;
+    background-color: rgb(235, 36, 36);
+    font-weight: 300;
+    width: 300px;
+    border: 2px solid rgb(235, 36, 36);
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
+}
+
+/* Black Blank Space */
+#space h1 {
+    margin: 44px 200px;
+    font-weight: 350;
+    font-size: 2.3rem;
+}
+
+/* People */
+#people {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#people .brief,
+#people #pic img {
+    height: 600px;
+}
+
+#people .brief {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 1.7rem;
+    padding: 0px 207px;
+    color: black;
+    background-color: rgb(197, 187, 187);
+    box-shadow: inset 40px 0px rgb(205, 8, 8);
+}
+
+
+.fading-block{
+    /* border: 5px solid green; */
+    display: inline-block;
+    
+    position: relative;
+    width: 470px;
+    height: 470px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.block-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: opacity 0.3s;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.fading-block:hover .overlay{
+    opacity: 0.7;
+}
+
+
+.hover-text{
+    position: absolute;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight:500;
+    top: 45px;
+    left: 15px;
+    /* transform: translate(-20%,-50%); */
+    font-size: 1.9rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.fading-block:hover .hover-text{
+    opacity: 2;
+}
+
+.fading-block .hover-text .inner-hover-text{
+    position: relative;
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.fading-block .hover-text .about{
+    position: relative;
+    top: 30px;
+    font-size: 1.5rem;
+    font-weight: 250;
+}
+
+
+.feedback{
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 420px;
+    /* justify-content: center; */
+
+    /* align-items: center; */
+}
+
+.feedback .contact-us h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 380;
+    margin-bottom: 30px;
+    
+    
+}
+
+.feedback .contact-us .location{
+    position: relative;
+    width: 350px;
+    left: 56px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    /* margin-left: 50px; */
+}
+
+.feedback .contact-us{
+    background-color: rgb(79, 176, 176);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    
+}
+
+.feedback .message {
+    background-color: rgb(188, 183, 171);
+   
+}
+.feedback .message .query{
+    
+    color: black;
+    font-size: 1.7rem;
+    width: 371px;
+    position: relative;
+    top: 55px;
+    left: 500px;
+}
+
+.message form{
+    position: relative;
+    top: 100px;
+    left: 506px;
+}
+.message form input{
+    /* border-style: none; */
+    margin: 12px 0px;
+    padding: 1px 10px;
+    font-weight: 500;
+    width: 300px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+input:focus{
+    outline: none;
+}
+
+input .request{
+    padding: 100px 0px;
+}
+
+.message form input::placeholder{
+    color: black;
+    opacity: 0.9;
+}
